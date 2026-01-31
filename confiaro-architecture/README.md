@@ -1,55 +1,113 @@
-# Confiaro — Public Architecture & Specifications
+# Confiaro — Public Architecture & Protocol Documentation
 
-Confiaro is a privacy-focused cryptocurrency conversion platform designed to enable Bitcoin ⇄ Monero exchanges without KYC, accounts, or personal data collection.
+Confiaro is a privacy-first cryptocurrency conversion platform designed to enable
+Bitcoin ⇄ Monero exchanges without identity verification, user accounts,
+or personal data collection.
 
-This repository contains **public-facing documentation, architectural descriptions, interface specifications, and reference implementations**.
+The system is built around a strict separation between public-facing interfaces
+and private execution infrastructure, following security and privacy best
+practices for financial systems.
 
-> ⚠️ Core execution logic, liquidity management, and operational infrastructure are intentionally private by design.
+This repository documents the **public architecture, protocol concepts,
+interface specifications, and reference structures** behind the Confiaro platform.
 
----
+The live system operates at:
 
-## 🔐 Privacy by Design
-
-- No email
-- No passwords
-- No identity verification
-- No tracking
-- No persistent user profiles
-
-Accounts are ephemeral and generated locally by the user interface.
+https://crypto.confiaro.com
 
 ---
 
-## 🧱 What is Open Here
+## Privacy Model
 
-- System architecture (high-level)
-- Security and privacy principles
-- Public API specifications (mocked)
-- Frontend interface helpers
-- Internationalization structure
-- Example conversion flows (non-operational)
+Confiaro is designed around a minimal-trust philosophy.
+
+The platform does not require and does not store:
+
+- Email addresses
+- Passwords
+- Identity documents
+- Personal information
+- Persistent user profiles
+- Tracking identifiers
+
+User interaction is based on ephemeral account identifiers generated locally
+by the interface and never tied to real-world identity.
+
+No KYC. No accounts. No surveillance.
 
 ---
 
-## 🔒 What is NOT Public
+## Architecture Philosophy
+
+Confiaro is not a typical “swap UI”.
+
+It is an infrastructure-oriented conversion system built to prioritize:
+
+- Privacy by default
+- Non-custodial interaction
+- Deterministic and auditable state transitions
+- Service isolation between BTC and XMR components
+- Minimal attack surface
+
+The architecture is designed to operate under the assumption of
+untrusted clients and hostile network environments.
+
+---
+
+## Scope of This Repository
+
+This repository intentionally exposes **only what must be public**.
+
+### Included:
+
+- High-level system architecture
+- Privacy and security principles
+- Interface and protocol specifications
+- Frontend structure and interaction flows
+- Internationalization framework
+- Non-operational example flows
+
+### Explicitly Excluded:
 
 - Conversion execution logic
-- Liquidity sourcing
-- Wallet infrastructure
-- Anti-abuse systems
-- Rate engines
-- Internal monitoring
+- Liquidity sourcing and management
+- Wallet infrastructure and key handling
+- Rate calculation engines
+- Anti-abuse and monitoring systems
+- Operational automation
 
-This separation follows industry best practices for financial and privacy-sensitive systems.
-
----
-
-## 📚 Repository Structure
-
-See `/docs` for detailed explanations.
+This separation is deliberate and necessary to preserve both security
+and user privacy.
 
 ---
 
-## 📄 License
+## Security Considerations
 
-This repository is licensed under the MIT License.
+Core execution components operate in isolated environments
+and are not exposed through this repository.
+
+Public interfaces are designed to be stateless, verifiable,
+and resilient to misuse.
+
+No part of this repository enables custody of user funds.
+
+---
+
+## Documentation Structure
+
+Detailed documentation can be found in:
+
+- `/docs` — architectural explanations and design rationale
+- `/specs` — protocol and interface specifications
+- `/examples` — reference flows and non-operational samples
+
+---
+
+## License
+
+This repository is released under the MIT License.
+
+---
+
+Confiaro is built on the principle that privacy is not a feature,
+but a requirement.
