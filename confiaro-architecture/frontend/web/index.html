@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Confiaro — Private Bitcoin ⇄ Monero Conversion</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+        content="Private, non-custodial Bitcoin to Monero conversion infrastructure. No KYC. No accounts. Privacy by design." />
+
+  <link rel="stylesheet" href="assets/css/app.css" />
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="brand">Confiaro</div>
+    <div class="tagline">Private BTC ⇄ XMR Conversion Infrastructure</div>
+  </header>
+
+  <main class="container">
+
+    <section class="converter">
+
+      <div class="wallet">
+        <h2>You send</h2>
+        <input type="number" placeholder="Bitcoin (BTC)" inputmode="decimal" />
+        <span class="asset">BTC</span>
+      </div>
+
+      <div class="swap-indicator">⇄</div>
+
+      <div class="wallet">
+        <h2>You receive</h2>
+        <input type="number" placeholder="Monero (XMR)" disabled />
+        <span class="asset">XMR</span>
+      </div>
+
+      <button class="action">
+        Generate Deposit Address
+      </button>
+
+      <div class="status">
+        Awaiting deposit parameters…
+      </div>
+
+    </section>
+
+    <section class="disclaimer">
+      <p>
+        Confiaro operates under a <strong>non-custodial architecture</strong>.
+        Users remain in control of their funds at all times, with conversion
+        executed automatically after blockchain confirmation.
+      </p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>
+      © Confiaro · Privacy is not a feature — it is a requirement.
+    </p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

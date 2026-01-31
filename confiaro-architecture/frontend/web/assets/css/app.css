@@ -1,0 +1,118 @@
+:root {
+  --bg: #0b0f1a;
+  --panel: #12172a;
+  --border: #1f2745;
+  --text: #e9ecff;
+  --muted: #9aa4d6;
+  --accent: #6bf0d1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  padding: 1.4rem 2rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(11, 15, 26, 0.9);
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.container {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+.converter {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 2.5rem;
+  text-align: center;
+}
+
+.wallet {
+  margin-bottom: 1.6rem;
+}
+
+.wallet h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.wallet input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #0f1430;
+  color: var(--text);
+}
+
+.wallet input:disabled {
+  opacity: 0.6;
+}
+
+.asset {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.swap-indicator {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: var(--accent);
+}
+
+.action {
+  margin-top: 2rem;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #6bf0d1, #7aa2ff);
+  color: #0b0f1a;
+}
+
+.status {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.disclaimer {
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.footer {
+  margin: 4rem 0 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
