@@ -1,0 +1,13 @@
+openapi: 3.0.0
+info:
+  title: Confiaro Public API (Mock)
+  version: 1.0.0
+  description: Public API specification for Confiaro interfaces. Non-operational.
+
+paths:
+  /convert/start:
+    post:
+      summary: Start conversion (mock)
+      responses:
+        '200':
+          description: Conversion started
