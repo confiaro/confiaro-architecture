@@ -85,7 +85,7 @@ Confiaro cannot access user funds.
 
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/thor.png"
+    src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/tor.png"
     alt="Tor Network"
     width="96"
   />
