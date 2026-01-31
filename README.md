@@ -1,175 +1,200 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/desktop/converter-bitcoin-para-monero-interface.webp"
-       alt="Confiaro BTC to XMR Interface"
-       width="100%" />
+  <img
+    src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/desktop/converter-bitcoin-para-monero-interface.webp"
+    alt="Confiaro — Bitcoin to Monero Conversion"
+    width="100%"
+  />
 </p>
 
 <h1 align="center">Confiaro Architecture</h1>
 
 <p align="center">
-  <strong>Privacy-first Bitcoin ↔ Monero conversion architecture</strong><br>
-  Non-custodial · Protocol-driven · No KYC · Infrastructure-oriented
+  <strong>Private, non-custodial Bitcoin ⇄ Monero conversion infrastructure</strong><br>
+  Automated · No KYC · No accounts · No email · Privacy by default
 </p>
 
 <p align="center">
-  <a href="https://crypto.confiaro.com"><strong>Live Platform</strong></a> ·
-  <a href="#overview">Overview</a> ·
-  <a href="#architecture">Architecture</a> ·
-  <a href="#security">Security</a> ·
-  <a href="#interface">Interface</a> ·
-  <a href="#roadmap">Roadmap</a>
+  <a href="https://crypto.confiaro.com"><strong>Live Platform</strong></a>
 </p>
 
 <hr>
 
-<h2 id="overview">Overview</h2>
+## Overview
 
-<p>
-<strong>Confiaro</strong> is a privacy-focused system architecture and protocol design
-for converting <strong>Bitcoin (BTC)</strong> to <strong>Monero (XMR)</strong> — and vice-versa —
-without custodial exposure, identity tracking, or account-based surveillance.
-</p>
+<strong>Confiaro</strong> is a privacy-first conversion architecture designed to enable
+<strong>automatic Bitcoin ⇄ Monero exchanges</strong> without custodial exposure,
+identity verification, or account-based tracking.
 
-<p>
-This repository documents the <strong>technical architecture</strong>,
-<strong>design principles</strong>, and <strong>protocol flow</strong> behind the production system
-running at:
-</p>
+The system operates as a <strong>non-custodial conversion layer</strong> where users
+remain in full control of their funds, keys, and recovery data at all times.
+
+There is no registration.
+There is no email.
+There is no KYC.
+
+The live production system operates at:
 
 <p align="center">
   <a href="https://crypto.confiaro.com"><strong>https://crypto.confiaro.com</strong></a>
 </p>
 
-<p>
-Confiaro is not a generic “swap UI”.
-It is an <strong>infrastructure-level conversion system</strong> built with strict service
-separation, blockchain-verifiable accounting, and privacy as a non-negotiable
-requirement.
-</p>
+---
 
-<hr>
+## Automated Conversion Flow
 
-<h2 id="architecture">System Architecture</h2>
+- Fully automated execution
+- Typical conversion time: **minutes**
+- No manual approval
+- No fund locking
+- No intermediaries
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/desktop/converter-monero-para-bitcoin-painel.webp"
-       alt="Conversion Panel Architecture"
-       width="92%" />
-</p>
+Funds are credited automatically after blockchain confirmations
+and become immediately available for withdrawal.
 
-<h3>Core Components</h3>
+Users can deposit and withdraw at any time.
 
-<ul>
-  <li>
-    <strong>Frontend Interface</strong><br>
-    Stateless web interface with account abstraction via short <code>account_id</code>,
-    dynamic conversion direction, QR-based deposits and real-time status tracking.
-  </li>
+---
 
-  <li>
-    <strong>Bitcoin Service</strong><br>
-    Integrated with <strong>BTCPay Server</strong>, invoice-based deposits,
-    signed webhooks and on-chain verification.
-  </li>
-
-  <li>
-    <strong>Monero Service</strong><br>
-    Dedicated Monero Wallet RPC, subaddress-per-deposit model,
-    confirmation-based crediting and isolated infrastructure.
-  </li>
-
-  <li>
-    <strong>Coordinator Core</strong><br>
-    Conversion orchestration, balance accounting, deterministic state transitions
-    and full historical event tracking.
-  </li>
-</ul>
-
-<hr>
-
-<h2 id="security">Security Model</h2>
-
-<p>
-Confiaro follows a <strong>minimal-trust, adversarial-network model</strong>.
-The system assumes untrusted clients, hostile networks and zero reliance on
-user honesty.
-</p>
-
-<ul>
-  <li>No private keys are ever requested or stored</li>
-  <li>BTC and XMR services are physically and logically isolated</li>
-  <li>All inbound events are webhook-verified and signature-checked</li>
-  <li>State transitions are deterministic and auditable</li>
-  <li>No personal data is collected, stored or correlated</li>
-</ul>
-
-<p>
-Every balance change can be explained, traced and verified on-chain.
-</p>
-
-<hr>
-
-<h2 id="interface">User Interface (Real Screens)</h2>
-
-<h3>Desktop</h3>
+## Non-Custodial Wallet Architecture
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/desktop/endereco-deposito-bitcoin-monero.webp"
-       width="45%" />
-  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/desktop/historico-conversao-btc-xmr.webp"
-       width="45%" />
+  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/bitcoin.png" width="72" />
+  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/monero.png" width="72" />
 </p>
 
-<h3>Mobile</h3>
+Confiaro is strictly **non-custodial by design**.
+
+During initialization, the system automatically creates:
+
+- One Bitcoin wallet
+- One Monero wallet
+
+Each wallet has its **own independent seed phrase**.
+
+Users are responsible for storing their seeds and can restore
+their wallets in **any compatible Bitcoin or Monero wallet**
+at any time, without relying on Confiaro.
+
+Confiaro does not store seeds.
+Confiaro does not control keys.
+Confiaro cannot access user funds.
+
+---
+
+## Network Privacy & Tor
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/mobile/converter-bitcoin-para-monero-interface.webp"
-       width="24%" />
-  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/mobile/endereco-deposito-bitcoin-monero.webp"
-       width="24%" />
-  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/mobile/historico-conversao-btc-xmr.webp"
-       width="24%" />
+  <img
+    src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/thor.png"
+    alt="Tor Network"
+    width="96"
+  />
 </p>
 
-<p>
-All screenshots above are from the production system.
-No mockups. No placeholders.
+Confiaro is designed to operate over the **Tor network**.
+
+When accessed through Tor:
+
+- IP addresses are not exposed
+- Network location is hidden
+- ISP-level metadata is mitigated
+- Geographic correlation is reduced
+
+Tor is treated as a **first-class transport layer**, not an optional feature.
+
+The platform does not block, fingerprint, or degrade Tor-based access.
+
+Privacy at the network layer is considered as critical as privacy on-chain.
+
+---
+
+## System Architecture
+
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/desktop/converter-monero-para-bitcoin-painel.webp"
+    alt="Confiaro Conversion Architecture"
+    width="92%"
+  />
 </p>
 
-<hr>
+### Core Components
 
-<h2>Design Principles</h2>
+- <strong>Frontend Interface</strong>  
+  Stateless web interface with ephemeral account abstraction,
+  dynamic conversion direction and real-time status tracking.
 
-<ul>
-  <li>Protocol first, interface second</li>
-  <li>No hidden custodial logic</li>
-  <li>No opaque balance manipulation</li>
-  <li>Everything explainable, traceable and observable</li>
-  <li>User experience must never compromise privacy</li>
-</ul>
+- <strong>Bitcoin Service</strong>  
+  Invoice-based deposits, on-chain verification and webhook-driven settlement.
 
-<hr>
+- <strong>Monero Service</strong>  
+  Dedicated wallet RPC, subaddress-per-deposit model and confirmation-based crediting.
 
-<h2 id="roadmap">Roadmap</h2>
+- <strong>Coordinator Core</strong>  
+  Deterministic conversion orchestration, balance accounting
+  and auditable state transitions.
 
-<ul>
-  <li>[ ] Formal protocol specification (RFC-style)</li>
-  <li>[ ] Tor / I2P native routing</li>
-  <li>[ ] Deterministic rate-locking engine</li>
-  <li>[ ] Proof-of-reserves transparency endpoint</li>
-  <li>[ ] Public architecture whitepaper</li>
-</ul>
+All services are logically and physically isolated.
 
-<hr>
+---
 
-<h2>Disclaimer</h2>
+## Security Model
 
-<p>
+Confiaro operates under a <strong>minimal-trust, adversarial threat model</strong>.
+
+- No private keys are requested
+- No identity data is collected
+- No accounts or credentials exist
+- No tracking or analytics are used
+
+The system assumes untrusted clients and hostile networks by default.
+
+No part of this repository enables custody of user funds.
+
+---
+
+## Interface (Production Screens)
+
+### Desktop
+
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/desktop/endereco-deposito-bitcoin-monero.webp"
+    width="45%"
+  />
+  <img
+    src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/desktop/historico-conversao-btc-xmr.webp"
+    width="45%"
+  />
+</p>
+
+### Mobile
+
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/mobile/converter-bitcoin-para-monero-interface.webp"
+    width="24%"
+  />
+  <img
+    src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/mobile/endereco-deposito-bitcoin-monero.webp"
+    width="24%"
+  />
+  <img
+    src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/mobile/historico-conversao-btc-xmr.webp"
+    width="24%"
+  />
+</p>
+
+All screenshots are from the live production system.
+
+---
+
+## Disclaimer
+
 This repository documents architectural and protocol concepts only.
 It does not constitute financial advice or custodial services.
-</p>
 
-<hr>
+---
 
 <p align="center">
   <em>Privacy is not a feature. It is a requirement.</em>
