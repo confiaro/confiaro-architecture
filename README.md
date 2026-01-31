@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/assets/desktop/converter-bitcoin-para-monero-interface.webp"
+  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/desktop/converter-bitcoin-para-monero-interface.webp"
        alt="Confiaro BTC to XMR Interface"
        width="100%" />
 </p>
@@ -52,7 +52,7 @@ requirement.
 <h2 id="architecture">System Architecture</h2>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/assets/desktop/converter-monero-para-bitcoin-painel.webp"
+  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/desktop/converter-monero-para-bitcoin-painel.webp"
        alt="Conversion Panel Architecture"
        width="92%" />
 </p>
@@ -114,20 +114,20 @@ Every balance change can be explained, traced and verified on-chain.
 <h3>Desktop</h3>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/assets/desktop/endereco-deposito-bitcoin-monero.webp"
+  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/desktop/endereco-deposito-bitcoin-monero.webp"
        width="45%" />
-  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/assets/desktop/historico-conversao-btc-xmr.webp"
+  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/desktop/historico-conversao-btc-xmr.webp"
        width="45%" />
 </p>
 
 <h3>Mobile</h3>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/assets/mobile/converter-bitcoin-para-monero-interface.webp"
+  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/mobile/converter-bitcoin-para-monero-interface.webp"
        width="24%" />
-  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/assets/mobile/endereco-deposito-bitcoin-monero.webp"
+  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/mobile/endereco-deposito-bitcoin-monero.webp"
        width="24%" />
-  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/assets/mobile/historico-conversao-btc-xmr.webp"
+  <img src="https://raw.githubusercontent.com/confiaro/confiaro-architecture/main/confiaro-architecture/assets/mobile/historico-conversao-btc-xmr.webp"
        width="24%" />
 </p>
 
